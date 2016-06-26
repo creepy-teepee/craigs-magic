@@ -1,0 +1,16 @@
+{
+    "name": "creepy-teepee/craigs-magic",
+    "authors": [
+        {
+            "name": "James Howard",
+            "email": "james@reetgood.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "johnpbloch/wordpress": "4.2"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp"
+    }
+}

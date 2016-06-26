@@ -1,0 +1,20 @@
+.DS_Store
+
+/wp
+
+/node_modules/
+/bower_components/
+
+# Ignore all in wp-content except our theme.
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/craigs-magic/
+
+# Ignore generated files in our theme.
+/wp-content/themes/craigs-magic/css/style.css
+/wp-content/themes/craigs-magic/css/style.min.css
+/wp-content/themes/craigs-magic/images/
+/wp-content/themes/craigs-magic/fonts/
+/wp-content/themes/craigs-magic/js/
+/vendor/

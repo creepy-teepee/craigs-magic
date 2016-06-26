@@ -1,0 +1,24 @@
+{
+  "name": "company-chameleon",
+  "version": "1.0.0",
+  "description": "Bespoke WordPress theme for Company Chameleon.",
+  "repository": "https://jameshoward1982@bitbucket.org/jameshoward1982/company-chameleon-wordpress.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fuzzy Duck",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-newer": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-watch": "^4.3.5"
+  }
+}
