@@ -1,0 +1,8 @@
+{% if pagination.next or pagination.prev %}
+	{% if pagination.next %}
+		<a href="{{pagination.next.link}}" class="fl">← View older</a>
+	{% endif %}
+	{% if pagination.prev %}
+		<a href="{{pagination.prev.link}}" class="fr">View newer →</a>
+	{% endif %}
+{% endif %}
