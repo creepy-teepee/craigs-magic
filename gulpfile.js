@@ -12,7 +12,7 @@ var imagemin = require('gulp-imagemin');
 var newer = require('gulp-newer');
 
 var themeName = 'craigs-magic';
-var themeDir = 'build/wordpress/wp-content/themes/' + themeName;
+var themeDir = 'build/content/themes/' + themeName;
 
 /**
  * Styles task.
@@ -81,4 +81,6 @@ gulp.task('watch', function() {
 	gulp.watch('theme-src/copy/**/*', ['copy']);
 });
 
-gulp.task('develop', ['copy', 'images', 'styles', 'watch']);
+gulp.task('build', ['copy', 'images', 'styles']);
+
+gulp.task('develop', ['build', 'watch']);
