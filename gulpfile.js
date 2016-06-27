@@ -12,7 +12,7 @@ var imagemin = require('gulp-imagemin');
 var newer = require('gulp-newer');
 
 var themeName = 'craigs-magic';
-var themeDir = 'wp-content/themes/' + themeName;
+var themeDir = 'build/wordpress/wp-content/themes/' + themeName;
 
 /**
  * Styles task.

@@ -9,8 +9,5 @@
     "require": {
         "php": ">=5.4",
         "johnpbloch/wordpress": "4.2"
-    },
-    "extra": {
-        "wordpress-install-dir": "wp"
     }
 }
