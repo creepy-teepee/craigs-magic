@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "052ddae26a49d53e7a768ed60111d7be",
-    "content-hash": "2c0d7f25bd5447e7bc780e460c28e761",
+    "hash": "0b649b4d227e29138c7834e76eaa9b38",
+    "content-hash": "2e91ef80cfc4b41a737f0f4c81c0f5a0",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -211,16 +211,16 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.2",
+            "version": "4.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "4c247a5f81af6207a99ecda3ce3b895a9f6af84e"
+                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/4c247a5f81af6207a99ecda3ce3b895a9f6af84e",
-                "reference": "4c247a5f81af6207a99ecda3ce3b895a9f6af84e",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
+                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-04-23 16:31:07"
+            "time": "2016-06-21 16:31:21"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",

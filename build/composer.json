@@ -8,7 +8,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "johnpbloch/wordpress": "4.2",
-        "timber/timber": "^1.0"
+        "timber/timber": "^1.0",
+        "johnpbloch/wordpress": "^4.5"
     }
 }
