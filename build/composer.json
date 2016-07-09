@@ -1,0 +1,14 @@
+{
+    "name": "creepy-teepee/craigs-magic",
+    "authors": [
+        {
+            "name": "James Howard",
+            "email": "james@reetgood.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "timber/timber": "^1.0",
+        "johnpbloch/wordpress": "^4.5"
+    }
+}
