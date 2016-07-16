@@ -41,7 +41,7 @@
 
 @import '../../bower_components/inuit-defaults/settings.defaults';
 
-// @import '../../bower_components/plumpcss-defaults/settings.defaults';
+@import '../../bower_components/plumpcss-defaults/settings.defaults';
 
 // @import '../../bower_components/inuit-responsive-settings/settings.responsive';
 
@@ -121,6 +121,13 @@ $inuit-btn-border-width: 0;
 
 .btn {
 	clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
+	transition: .2s background-color;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: darken($color-buttons, 10%);
+	}
 }
 
 // @import '../../bower_components/plumpcss-exhibit/objects.exhibit';
@@ -151,7 +158,8 @@ $inuit-btn-border-width: 0;
 
 // @import '../../bower_components/plumpcss-widescreen-frame/objects.widescreen-frame';
 
-// @import '../../bower_components/plumpcss-wrapper/objects.wrapper';
+$plump-wrapper-width: 1008px; // 960px + 24px padding each side.
+@import '../../bower_components/plumpcss-wrapper/objects.wrapper';
 
 
 
