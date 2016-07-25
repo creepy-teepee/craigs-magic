@@ -60,16 +60,16 @@
         },
         {
             "name": "asm89/twig-cache-extension",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/asm89/twig-cache-extension.git",
-                "reference": "76a801d6da8e1a1015af974d93df4ade0dda7267"
+                "reference": "37cfee1f06fe8372cbe714d2d9224db276790936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asm89/twig-cache-extension/zipball/76a801d6da8e1a1015af974d93df4ade0dda7267",
-                "reference": "76a801d6da8e1a1015af974d93df4ade0dda7267",
+                "url": "https://api.github.com/repos/asm89/twig-cache-extension/zipball/37cfee1f06fe8372cbe714d2d9224db276790936",
+                "reference": "37cfee1f06fe8372cbe714d2d9224db276790936",
                 "shasum": ""
             },
             "require": {
@@ -79,10 +79,13 @@
             "require-dev": {
                 "doctrine/cache": "~1.0"
             },
+            "suggest": {
+                "psr/cache-implementation": "To make use of PSR-6 cache implementation via PsrCacheAdapter."
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -107,20 +110,20 @@
                 "extension",
                 "twig"
             ],
-            "time": "2016-02-14 13:52:38"
+            "time": "2016-06-14 09:16:57"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.25",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/a3595c5272a6f247228abb20076ed27321e4aae9",
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9",
                 "shasum": ""
             },
             "require": {
@@ -167,6 +170,7 @@
                 "MODX Evo",
                 "Mautic",
                 "OXID",
+                "RadPHP",
                 "SMF",
                 "Thelia",
                 "WolfCMS",
@@ -182,6 +186,7 @@
                 "dokuwiki",
                 "drupal",
                 "elgg",
+                "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
@@ -207,7 +212,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2016-07-05 06:18:20"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -296,16 +301,16 @@
         },
         {
             "name": "timber/timber",
-            "version": "1.0.5",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/timber/timber.git",
-                "reference": "1d519f6eb75669f994407f0eeeabe0d2ea995066"
+                "reference": "3f20343c487c09f3adf5161fde20d5e9a28e9710"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/timber/timber/zipball/1d519f6eb75669f994407f0eeeabe0d2ea995066",
-                "reference": "1d519f6eb75669f994407f0eeeabe0d2ea995066",
+                "url": "https://api.github.com/repos/timber/timber/zipball/3f20343c487c09f3adf5161fde20d5e9a28e9710",
+                "reference": "3f20343c487c09f3adf5161fde20d5e9a28e9710",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +318,7 @@
                 "composer/installers": "~1.0",
                 "php": ">=5.3.0",
                 "twig/twig": "1.*",
-                "upstatement/routes": "0.3"
+                "upstatement/routes": "0.4"
             },
             "require-dev": {
                 "jarednova/markdowndocs": "dev-master",
@@ -326,10 +331,7 @@
             "autoload": {
                 "psr-4": {
                     "Timber\\": "lib/"
-                },
-                "files": [
-                    "init.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -355,7 +357,7 @@
                 "timber",
                 "twig"
             ],
-            "time": "2016-06-21 22:45:40"
+            "time": "2016-07-19 17:16:34"
         },
         {
             "name": "twig/twig",
@@ -420,16 +422,16 @@
         },
         {
             "name": "upstatement/routes",
-            "version": "0.3",
+            "version": "0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Upstatement/routes.git",
-                "reference": "40d003b69c0f5c52fb4b15e5d1fa4d5c522c9475"
+                "reference": "fae7d46f56e8b5775f072774941a5f0a25cb86f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Upstatement/routes/zipball/40d003b69c0f5c52fb4b15e5d1fa4d5c522c9475",
-                "reference": "40d003b69c0f5c52fb4b15e5d1fa4d5c522c9475",
+                "url": "https://api.github.com/repos/Upstatement/routes/zipball/fae7d46f56e8b5775f072774941a5f0a25cb86f3",
+                "reference": "fae7d46f56e8b5775f072774941a5f0a25cb86f3",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +469,7 @@
                 "routes",
                 "routing"
             ],
-            "time": "2015-03-07 13:41:29"
+            "time": "2016-07-06 12:53:24"
         }
     ],
     "packages-dev": [],
