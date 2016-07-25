@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="6px" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Canvas:-1248px,-Viewport:-960px-+-48px-Gutters" transform="translate(-150.000000, -584.000000)" fill="#EC1F27">
+            <g id="Main-Content" transform="translate(-5.000000, 185.000000)">
+                <g id="Schedule-Cards" transform="translate(149.000000, 355.000000)">
+                    <g id="Card">
+                        <path d="M9,45 C8.2219942,43.2307638 6.0143572,43.7159991 6,46 C5.99193677,47.4570255 7.05112312,48.2907792 8,49 C8.44017598,49.3351701 8.92686623,49.7006325 9,50 C9.06830574,49.7065824 9.61062966,49.3214596 10,49 C10.9355816,48.2439565 12.0079459,47.4426683 12,46 C11.9854062,43.695692 9.73942786,43.3134148 9,45" id="Heart"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
