@@ -1,0 +1,54 @@
+///*------------------------------------*\
+//   #HEADINGS
+//\*------------------------------------*/
+
+//    Headings 1–6’s corresponding Greek-alphabet abstract classes for
+//    double-stranded heading hierarchy:
+//    csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+//
+//    Use these utility classes to cause other elements to adopt the styling
+//    of the respective heading, e.g.:
+//
+//    <h2 class="u-alpha">Lorem ipsum</h2>
+
+.u-alpha,
+%u-alpha {
+
+	@include heading-values(map-get($headings, 'h1'));
+
+}
+
+.u-beta,
+%u-beta {
+
+	@include heading-values(map-get($headings, 'h2'));
+
+}
+
+.u-gamma,
+%u-gamma {
+
+	@include heading-values(map-get($headings, 'h3'));
+
+}
+
+.u-delta,
+%u-delta {
+
+	@include heading-values(map-get($headings, 'h4'));
+
+}
+
+.u-epsilon,
+%u-epsilon {
+
+	@include heading-values(map-get($headings, 'h5'));
+
+}
+
+.u-zeta,
+%u-zeta {
+
+	@include heading-values(map-get($headings, 'h6'));
+
+}

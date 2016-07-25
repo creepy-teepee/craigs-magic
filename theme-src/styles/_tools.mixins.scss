@@ -1,0 +1,31 @@
+//    Generate responsive headings
+@mixin heading-values($values) {
+
+	@if map-has-key($values, 'line-height') {
+
+		@include inuit-font-size(map-get($values, 'font-size'), map-get($values, 'line-height') / map-get($values, 'font-size'));
+
+	} @else {
+
+		@include inuit-font-size(map-get($values, 'font-size'));
+	}
+
+	@if map-has-key($values, 'font-size-palm') {
+
+		@include media-query(palm) {
+
+			@if map-has-key($values, 'line-height-palm') {
+
+				@include inuit-font-size(map-get($values, 'font-size-palm'), map-get($values, 'line-height-palm') / map-get($values, 'font-size-palm'));
+
+			} @else {
+
+				@include inuit-font-size(map-get($values, 'font-size-palm'));
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,52 @@
+///*------------------------------------*\
+//	 #HEADINGS
+//\*------------------------------------*/
+
+//    Without a responsive treatment heading sizes can become
+//    significantly larger on a smaller viewports.
+
+$headings: (
+	h1: (
+		font-size:      36px,
+		font-size-palm: 30px,
+		line-height:    45px
+	),
+	h2: (
+		font-size:      30px,
+		font-size-palm: 24px,
+		line-height:    38px
+	),
+	h3: (
+		font-size:      24px,
+		font-size-palm: 20px,
+		line-height:    30px
+	),
+	h4: (
+		font-size:      20px,
+		font-size-palm: 16px,
+		line-height:    25px
+	),
+	h5: (
+		font-size:      16px,
+		font-size-palm: 14px,
+		line-height:    20px
+	),
+	h6: (
+		font-size:      14px,
+		font-size-palm: 12px,
+		line-height:    18px
+	)
+) !default;
+
+
+
+
+//    Loop over each key/value pair in `$headings`, assigning the key to
+//    `$heading` and the values to `$values`.
+//    Interpolate the `$heading` values and output.
+//    Pass the values as arguments to a `heading-values` mixin.
+@each $heading, $values in $headings {
+	#{$heading} {
+		@include heading-values($values);
+	}
+}

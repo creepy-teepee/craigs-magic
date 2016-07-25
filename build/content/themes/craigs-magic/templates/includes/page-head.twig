@@ -1,27 +1,32 @@
-<div class="c-page-head">
-	<a href="{{ site.link }}" title="Return to home page." class="c-page-head__logo">
-		{% if isFront %}
-			<h1><img src="{{site.theme.link}}/images/craig-stephenson-magician.svg" alt="Craig Richard Stephenson Magician"></h1>
-		{% else %}
-			<img src="{{site.theme.link}}/images/craig-stephenson-magician.svg" alt="Craig Richard Stephenson Magician">
-		{% endif %}
-	</a>
+<div class="wrapper">
+	<div class="c-page-head">
+		<a href="{{ site.link }}" title="Return to home page.">
+			{% if isFront %}
+				<h1 class="u-mb0"><img src="{{site.theme.link}}/images/craig-stephenson-magician.svg" alt="Craig Richard Stephenson Magician" class="c-page-head__logo"></h1>
+			{% else %}
+				<img src="{{site.theme.link}}/images/craig-stephenson-magician.svg" alt="Craig Richard Stephenson Magician" class="c-page-head__logo">
+			{% endif %}
+		</a>
 
-	<ul class="c-nav-primary  c-page-head__nav">
-		<li class="c-nav-primary__item">
-			<a href="#about" class="c-nav-primary__link">About</a>
-		</li>
-		<li class="c-nav-primary__item">
-			<a href="#news" class="c-nav-primary__link">News</a>
-		</li>
-		<li class="c-nav-primary__item">
-			<a href="#reviews" class="c-nav-primary__link">Reviews</a>
-		</li>
-		<li class="c-nav-primary__item">
-			<a href="#contact" class="c-nav-primary__link">Contact</a>
-		</li>
-		<li class="c-nav-primary__item  c-nav-primary__item--offset">
-			<a href="#" class="btn  c-nav-primary__link">Tickets</a>
-		</li>
-	</ul>
+		<ul class="c-nav-primary  c-page-head__nav">
+			<li class="c-nav-primary__item">
+				<a href="#about" class="c-nav-primary__link">About</a>
+			</li>
+			<li class="c-nav-primary__item">
+				<a href="#magic" class="c-nav-primary__link">Magic</a>
+			</li>
+			<li class="c-nav-primary__item">
+				<a href="#news" class="c-nav-primary__link">News</a>
+			</li>
+			<li class="c-nav-primary__item">
+				<a href="#reviews" class="c-nav-primary__link">Reviews</a>
+			</li>
+			<li class="c-nav-primary__item">
+				<a href="#contact" class="c-nav-primary__link">Contact</a>
+			</li>
+			<li class="c-nav-primary__item  c-nav-primary__item--offset">
+				<a href="#" class="btn  c-nav-primary__link">Tickets</a>
+			</li>
+		</ul>
+	</div>
 </div>
