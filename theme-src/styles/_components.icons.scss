@@ -1,0 +1,16 @@
+.c-icon {
+	display: inline-block;
+	width: double($spacing-unit);
+	height: double($spacing-unit);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+
+	&--facebook { background-image: url('../images/icon-facebook.svg'); }
+	&--instagram { background-image: url('../images/icon-instagram.svg'); }
+	&--pinterest { background-image: url('../images/icon-pinterest.svg'); }
+	&--twitter { background-image: url('../images/icon-twitter.svg'); }
+	&--youtube { background-image: url('../images/icon-youtube.svg'); }
+
+}

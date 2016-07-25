@@ -3,7 +3,23 @@
 use \Timber\Timber;
 
 $context = Timber::get_context();
-$context['posts'] = Timber::get_posts();
-$context['pagination'] = Timber::get_pagination();
+$templates = array('index.twig');
 
-Timber::render(array('index.twig'), $context);
+if (is_front_page()) {
+	// Need to load 3 news posts for homepage.
+	$context['posts'] = Timber::get_posts(array(
+		'post_type'      => 'post',
+		'posts_per_page' => 3
+	));
+	$context['isFront'] = true;
+}
+
+if (is_home()) {
+	// Use a custom template for news.
+	$context['themeName'] = 'news';
+	$context['background'] = get_stylesheet_directory_uri() . '/images/news-background.jpg';
+	$context['cornerImage'] = get_stylesheet_directory_uri() . '/images/corner-news.png';
+	array_unshift($templates, 'news.twig');
+}
+
+Timber::render($templates, $context);

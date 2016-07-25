@@ -1,16 +1,51 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h1>News</h1>
-	{% for post in posts %}
-		{% if post.get_thumbnail %}
-			<a href="{{ post.link }}"><img src="{{ post.thumbnail | resize(540, 360) }}" /></a>
-		{% endif %}
-		<h2>{{ post.title }}</h2>
-		<p>{{ post.post_excerpt | nl2br }}</p>
-		<p><a href="{{ post.link }}">Read more</a></p>
-	{% endfor %}
 
-	{% include 'includes/pagination.twig' with { type : 'news' } %}
+	<h2>About</h2>
+
+	<h2>Magic</h2>
+
+	<div class="layout">
+		<div class="layout__item  u-1/2-lap-and-up">
+			<h3 class="u-color-brand">Bar</h3>
+			<p>I can join you and your friends at your home, in a bar, café or any restaurant of your choice to perform dazzling close up magic.</p>
+		</div><!--
+		--><div class="layout__item  u-1/2-lap-and-up">
+			<h3 class="u-color-brand">Wedding</h3>
+			<p>I am an extremely experienced wedding performer and understand how magic can add (but never distract) from the wonder of a wedding day.</p>
+		</div><!--
+		--><div class="layout__item  u-1/2-lap-and-up">
+			<h3 class="u-color-brand">Stage</h3>
+			<p>My stage show involves a combination of magic, mindreading and psychologicial illusion, – and always plenty of room for the most vital aspect, audience participation.</p>
+		</div><!--
+		--><div class="layout__item  u-1/2-lap-and-up">
+			<h3 class="u-color-brand">Corporate</h3>
+			<p>I have provided corporate entertainment for local clients such as the York Brewary to national companies such as Tesco.</p>
+		</div>
+	</div>
+
+	<h2>News</h2>
+
+	<div class="layout"><!--
+		{% for post in posts %}
+			--><div class="layout__item  u-1/3-lap-and-up  u-mb+">
+				<a href="{{ post.link }}" class="c-image-overlay  c-image-overlay--reveal">
+					{% if post.get_thumbnail %}
+						<img src="{{ post.thumbnail.src | resize(540, 360) }}" class="c-image-overlay__img">
+					{% endif %}
+					<div class="c-image-overlay__body  c-image-overlay__body--bottom">
+						<h3 class="[ box  box--tiny ]  u-background-brand-alt  u-mb0">{{ post.title }}</h3>
+					</div>
+				</a>
+			</div><!--
+		{% endfor %}
+	--></div>
+
+	<div class="c-actions">
+		<a href="news/" class="btn">News Archive</a>
+	</div>
+
+	<h2>Reviews</h2>
 
 {% endblock %}

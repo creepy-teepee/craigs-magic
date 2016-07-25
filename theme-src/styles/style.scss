@@ -43,11 +43,13 @@
 
 @import '../../bower_components/plumpcss-defaults/settings.defaults';
 
-// @import '../../bower_components/inuit-responsive-settings/settings.responsive';
+@import '../../bower_components/inuit-responsive-settings/settings.responsive';
 
 // @import '../../bower_components/plumpcss-responsive-settings/settings.responsive';
 
 @import 'settings.colors';
+
+$spacing-unit: $inuit-base-spacing-unit;
 
 
 
@@ -63,9 +65,9 @@
 
 @import '../../bower_components/inuit-mixins/tools.mixins';
 
-// @import '../../bower_components/plumpcss-mixins/tools.mixins';
+@import '../../bower_components/plumpcss-mixins/tools.mixins';
 
-// @import '../../bower_components/inuit-responsive-tools/tools.responsive';
+@import '../../bower_components/inuit-responsive-tools/tools.responsive';
 
 @import '../../bower_components/inuit-tools-widths/tools.widths';
 
@@ -93,15 +95,24 @@
 //	 #BASE
 //\*------------------------------------*/
 
-// @import '../../bower_components/inuit-headings/base.headings';
-
-// @import '../../bower_components/inuit-images/base.images';
+@import '../../bower_components/inuit-headings/base.headings';
 
 // @import '../../bower_components/inuit-lists/base.lists';
 
 @import '../../bower_components/inuit-page/base.page';
 
 // @import '../../bower_components/inuit-paragraphs/base.paragraphs';
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+@include headings {
+	text-transform: uppercase;;
+}
 
 
 
@@ -111,15 +122,19 @@
 //	 #OBJECTS
 //\*------------------------------------*/
 
-// @import '../../bower_components/plumpcss-band/objects.band';
+$plump-enable-band--tiny:  true;
+$plump-enable-band--large: true;
+@import '../../bower_components/plumpcss-band/objects.band';
 
-// @import '../../bower_components/inuit-box/objects.box';
+$inuit-enable-box--tiny: true;
+@import '../../bower_components/inuit-box/objects.box';
 
 $inuit-btn-background:   $color-buttons;
 $inuit-btn-border-width: 0;
 @import '../../bower_components/inuit-buttons/objects.buttons';
 
 .btn {
+	text-transform: uppercase;
 	clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
 	transition: .2s background-color;
 
@@ -134,13 +149,13 @@ $inuit-btn-border-width: 0;
 
 // @import '../../bower_components/inuit-flag/objects.flag';
 
-// @import '../../bower_components/inuit-layout/objects.layout';
+@import '../../bower_components/inuit-layout/objects.layout';
 
 // @import '../../bower_components/inuit-list-bare/objects.list-bare';
 
 // @import '../../bower_components/inuit-list-block/objects.list-block';
 
-// @import '../../bower_components/inuit-list-inline/objects.list-inline';
+@import '../../bower_components/inuit-list-inline/objects.list-inline';
 
 // @import '../../bower_components/inuit-list-ui/objects.list-ui';
 
@@ -169,15 +184,104 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 //	 #COMPONENTS
 //\*------------------------------------*/
 
+@import 'components.icons';
 
-//    Define component-level declarations here.
+.c-page-head {
+	@extend %clearfix;
+
+	padding-top: 1.5 * $spacing-unit;
+
+	&__logo {
+		float: left;
+	}
+
+	&__nav {
+		float: right;
+	}
+}
+
+.c-nav-primary {
+
+	@extend %list-inline;
+
+	&__item {
+		margin-left: double($spacing-unit);
+		vertical-align: middle;
+
+		&--offset {
+			margin-left: 5 * $spacing-unit;
+		}
+	}
+
+	&__link {
+		color: $color-nav-primary;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		@include attention {
+			text-decoration: underline;
+		}
+	}
+}
+
+.c-list-social {
+	@extend %list-inline;
+
+	&__item {
+		margin-right: quarter($spacing-unit);
+		margin-bottom: quarter($spacing-unit);
+	}
+}
+
+.c-image-overlay {
+	display: block;
+	position: relative;
+
+	&__img {
+		filter: grayscale(100%);
+	}
+
+	&__body {
+		position: absolute;
+		z-index: 2;
+
+		&--bottom {
+			bottom: 0;
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-image-overlay;
+		content: '';
+		transition: .2s background-color ease-out;
+		z-index: 1;
+	}
+
+	&--reveal:hover::after {
+		background-color: transparent;
+	}
+}
+
+.c-actions {
+	text-align: center;
+}
+
+
+
 
 
 ///*------------------------------------*\
 //	 #TRUMPS
 //\*------------------------------------*/
 
-// @import '../../bower_components/inuit-clearfix/trumps.clearfix';
+@import '../../bower_components/inuit-clearfix/trumps.clearfix';
 
 // @import '../../bower_components/plumpcss-floats/trumps.floats';
 
@@ -185,20 +289,46 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 
 // @import '../../bower_components/inuit-headings-trumps/trumps.headings';
 
-// @import '../../bower_components/plumpcss-hide/trumps.hide';
+@import '../../bower_components/plumpcss-hide/trumps.hide';
 
 // @import '../../bower_components/plumpcss-responsive-hide/trumps.hide-responsive';
 
 // @import '../../bower_components/inuit-print/trumps.print';
 
-// @import '../../bower_components/inuit-spacing/trumps.spacing';
+$inuit-enable-margins:        true;
+$inuit-enable-margins--none:  true;
+$inuit-enable-margins--tiny:  true;
+$inuit-enable-margins--large: true;
+@import '../../bower_components/inuit-spacing/trumps.spacing';
 
 // @import '../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive';
 
-// @import '../../bower_components/plumpcss-text-align/trumps.text-align';
+@import '../../bower_components/plumpcss-text-align/trumps.text-align';
 
 // @import '../../bower_components/plumpcss-responsive-text-align/trumps.text-align-responsive';
 
-// @import '../../bower_components/inuit-widths/trumps.widths';
+@import '../../bower_components/inuit-widths/trumps.widths';
 
-// @import '../../bower_components/inuit-widths-responsive/trumps.widths-responsive';
+@import '../../bower_components/inuit-widths-responsive/trumps.widths-responsive';
+
+
+
+
+
+///*------------------------------------*\
+//	 #TRUMPS
+//\*------------------------------------*/
+
+.u-color-brand {
+	color: $color-brand-primary;
+}
+
+.u-background-brand {
+	background-color: $color-brand-primary;
+	color: $color-dark-gray;
+}
+
+.u-background-brand-alt {
+	background-color: $color-off-white;
+	color: $color-brand-secondary;
+}
