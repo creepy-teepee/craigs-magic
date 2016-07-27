@@ -133,13 +133,14 @@ $spacing-unit: $inuit-base-spacing-unit;
 //	 #BASE
 //\*------------------------------------*/
 
-@import 'base.headings';
-
-// @import '../../bower_components/inuit-lists/base.lists';
+@import '../../bower_components/inuit-lists/base.lists';
 
 @import '../../bower_components/inuit-page/base.page';
 
 @import '../../bower_components/inuit-paragraphs/base.paragraphs';
+
+@import 'base.headings';
+@import 'base.quotes';
 
 @include media-query(lap-and-up) {
 	html {
@@ -445,6 +446,11 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 	&--diamonds::after {
 		background-image: url('../images/suit-diamonds.svg');
 	}
+}
+
+.c-heading {
+	margin-bottom: double($spacing-unit);
+	line-height: 60px;
 }
 
 

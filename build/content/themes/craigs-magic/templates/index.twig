@@ -81,29 +81,31 @@
 					</div>
 				</li>
 			</ul>
-			<div class="c-actions">
+			<div class="c-actions  u-mb">
 				<a href="https://tickets.edfringe.com/whats-on/craig-impossible" class="btn">Full Schedule &amp; Booking</a>
 			</div>
 		</div>
 
-		<h2 id="about">About</h2>
+		<div class="u-pb+">
+			<h2 id="about" class="c-heading">About</h2>
 
-		<div class="layout">
-			<div class="layout__item  u-1/2-lap-and-up">
-				[Image]
-			</div><!--
-			--><div class="layout__item  u-1/2-lap-and-up">
-				<p class="u-color-brand  u-text-upper  u-delta">His productions are an exciting mixture of contemporary magic, psychological illusion and humour.</p>
-				<p>Craig has written &amp; performed in various magic shows across the UK. furthermore In recent years he has had the opportunity to perform for audiences in Los Angeles and the Middle East.</p>
-				<p>Whether an intimate parlour show for a small group or a stage production for large audiences there is always plenty of audience participation, laughter and amazing magic.</p>
-				<p>His shows regularly sell out quickly so to avoid disappointment you can secure your tickets for future performances.</p>	
+			<div class="layout">
+				<div class="layout__item  u-1/2-lap-and-up">
+					[Image]
+				</div><!--
+				--><div class="layout__item  u-1/2-lap-and-up">
+					<p class="u-color-brand  u-text-upper  u-delta">His productions are an exciting mixture of contemporary magic, psychological illusion and humour.</p>
+					<p>Craig has written &amp; performed in various magic shows across the UK. furthermore In recent years he has had the opportunity to perform for audiences in Los Angeles and the Middle East.</p>
+					<p>Whether an intimate parlour show for a small group or a stage production for large audiences there is always plenty of audience participation, laughter and amazing magic.</p>
+					<p>His shows regularly sell out quickly so to avoid disappointment you can secure your tickets for future performances.</p>	
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="u-background-image-magic">
+	<div class="u-background-image-magic  u-pb+">
 		<div class="wrapper">
-			<h2 id="magic">Magic</h2>
+			<h2 id="magic" class="c-heading">Magic</h2>
 
 			<div class="layout  u-3/5-lap-and-up">
 				<div class="layout__item  u-1/2-lap-and-up">
@@ -127,15 +129,35 @@
 	</div>
 
 	<div class="wrapper">
-		<h2 id="news">News</h2>
-
-		{% include 'includes/news-list.twig' %}
-
-		<div class="c-actions">
-			<a href="news/" class="btn">News Archive</a>
+		<div class="u-pb+">
+			<h2 id="news" class="c-heading">News</h2>
+			{% include 'includes/news-list.twig' %}
+			<div class="c-actions">
+				<a href="news/" class="btn">News Archive</a>
+			</div>
 		</div>
 
-		<h2 id="reviews">Reviews</h2>
+		<div class="u-pb+">
+			<h2 id="reviews" class="c-heading">Reviews</h2>
+			<div class="layout">
+				<div class="layout__item  u-1/2-lap-and-up">
+					[Image]
+				</div><!--
+				--><div class="layout__item  u-1/2-lap-and-up">
+					<blockquote class="u-mb+">
+						<p>For anybody who doesn’t believe in magic, craig is your man.</p>
+						<p>It is not only his creative set-ups, but genius execution that will leave you breath-taken and questioning the world time and time again. Craig is a rare, charming jewel.</p>
+						<cite>Vicky Parry</cite>
+					</blockquote>
+					<blockquote>
+						<p>For anybody who doesn’t believe in magic, craig is your man.</p>
+						<p>It is not only his creative set-ups, but genius execution that will leave you breath-taken and questioning the world time and time again. Craig is a rare, charming jewel.</p>
+						<cite>Vicky Parry</cite>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 {% endblock %}

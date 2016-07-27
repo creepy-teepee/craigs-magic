@@ -1,0 +1,45 @@
+
+// Block quotes.
+//
+// 1. Hang opening punctuation.
+
+blockquote {
+
+	p {
+		margin-bottom: quarter($spacing-unit);
+
+		&:first-of-type {
+			position: relative;
+			color: $color-quote-first;
+			font-family: $knockout-69;
+			font-size: 36px;
+			text-transform: uppercase;
+
+			&::before {
+				position: absolute;
+				top: -.3em;
+				left: -.4em;
+				font-size: 72px;
+				content: '“';
+			}
+		}
+
+		&::after {
+			content: '';
+		}
+
+		&:last-of-type::after {
+			content: '”';
+		}
+
+	}
+
+	cite {
+		font-style: normal;
+
+		&::before {
+			content: '- ';
+		}
+	}
+
+}
