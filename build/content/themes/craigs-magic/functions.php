@@ -1,6 +1,10 @@
 <?php
 
+define('THEME_PATH', dirname(__FILE__));
+
 require_once 'vendor/autoload.php';
+
+require_once 'post-types/testimonial.php';
 
 use \Timber\Timber;
 

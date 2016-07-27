@@ -144,15 +144,12 @@
 					[Image]
 				</div><!--
 				--><div class="layout__item  u-1/2-lap-and-up">
-					<blockquote class="u-mb+">
-						<p>For anybody who doesn’t believe in magic, craig is your man.</p>
-						<p>It is not only his creative set-ups, but genius execution that will leave you breath-taken and questioning the world time and time again. Craig is a rare, charming jewel.</p>
-						<cite>Vicky Parry</cite>
-					</blockquote>
-					<blockquote>
-						<p>This guy just blew our minds with his magic.</p>
-						<cite>Vicky Parry</cite>
-					</blockquote>
+					{% for testimonial in testimonials %}
+						<blockquote class="u-mb+">
+							{{testimonial.content}}
+							<cite>{{testimonial.title}}</cite>
+						</blockquote>
+					{% endfor %}
 				</div>
 			</div>
 		</div>

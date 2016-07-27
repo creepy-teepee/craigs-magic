@@ -11,6 +11,14 @@ if (is_front_page()) {
 		'post_type'      => 'post',
 		'posts_per_page' => 3
 	));
+
+	// Load 2 random testimonials.
+	$context['testimonials'] = Timber::get_posts(array(
+		'post_type'      => 'testimonial',
+		'posts_per_page' => 2,
+		'orderby'        => 'rand'
+	));
+
 	$context['isFront'] = true;
 }
 
