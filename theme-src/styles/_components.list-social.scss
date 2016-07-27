@@ -1,0 +1,8 @@
+.c-list-social {
+	@extend %list-inline;
+
+	&__item {
+		margin-right: quarter($spacing-unit);
+		margin-bottom: quarter($spacing-unit);
+	}
+}

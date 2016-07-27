@@ -1,0 +1,28 @@
+.c-nav-primary {
+
+	@extend %list-inline;
+
+	font-family: $knockout-49;
+	font-size: 24px;
+
+	&__item {
+		margin-left: double($spacing-unit);
+		vertical-align: middle;
+
+		&--offset {
+			margin-left: 5 * $spacing-unit;
+		}
+	}
+
+	&__link {
+		color: $color-nav-primary;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:not(.btn) {
+			@include attention {
+				text-decoration: underline;
+			}
+		}
+	}
+}

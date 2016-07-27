@@ -1,0 +1,24 @@
+.c-date {
+	line-height: .7;
+	text-align: center;
+
+	&__day {
+		display: block;
+		margin-bottom: halve($spacing-unit);
+		color: $color-date-day;
+		font-family: $knockout-69;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+
+	&__date {
+		display: block;
+		font-family: $knockout-69;
+		font-size: 36px;
+	}
+
+	&__time {
+		font-family: $knockout-29;
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,57 @@
+.c-card {
+	position: relative;
+	padding: 16px 0;
+	border-radius: 2px;
+	background-color: $color-off-white;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		content: '';
+	}
+
+	&::before {
+		top: quarter($spacing-unit);
+		left: quarter($spacing-unit);
+	}
+
+	&::after {
+		right: quarter($spacing-unit);
+		bottom: quarter($spacing-unit);
+	}
+
+	&--clubs,
+	&--spades {
+		color: $color-dark-gray;
+	}
+
+	&--hearts,
+	&--diamonds {
+		color: $color-red;
+	}
+
+	&--clubs::before,
+	&--clubs::after {
+		background-image: url('../images/suit-clubs.svg');
+	}
+
+	&--spades::before,
+	&--spades::after {
+		background-image: url('../images/suit-spades.svg');
+	}
+
+	&--hearts::before,
+	&--hearts::after {
+		background-image: url('../images/suit-hearts.svg');
+	}
+
+	&--diamonds::before,
+	&--diamonds::after {
+		background-image: url('../images/suit-diamonds.svg');
+	}
+}

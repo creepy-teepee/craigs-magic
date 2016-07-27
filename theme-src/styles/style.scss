@@ -141,51 +141,9 @@ $spacing-unit: $inuit-base-spacing-unit;
 
 @import 'base.headings';
 @import 'base.quotes';
-
-@include media-query(lap-and-up) {
-	html {
-		background-image: url('../images/background-1.jpg');
-		background-position: center top;
-		background-repeat: no-repeat;
-	}
-}
-
-body {
-	font-family: $knockout-49;
-}
-
-img,
-svg {
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
-}
-
-@include headings {
-	font-weight: 400;
-	text-transform: uppercase;
-}
-
-h1,
-h2 {
-	font-family: $knockout-49;
-}
-
-h3,
-h4,
-h5,
-h6 {
-	font-family: $knockout-29;
-}
-
-a {
-	color: $color-links;
-	text-decoration: none;
-
-	@include attention {
-		text-decoration: underline;
-	}
-}
+@import 'base.page';
+@import 'base.images';
+@import 'base.links';
 
 
 
@@ -261,95 +219,12 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 //\*------------------------------------*/
 
 @import 'components.icons';
-
-.c-page-head {
-	@extend %clearfix;
-
-	padding-top: 1.5 * $spacing-unit;
-
-	&__logo {
-		float: left;
-		vertical-align: top;
-	}
-
-	&__nav {
-		float: right;
-	}
-}
-
-.c-nav-primary {
-
-	@extend %list-inline;
-
-	font-family: $knockout-49;
-	font-size: 24px;
-
-	&__item {
-		margin-left: double($spacing-unit);
-		vertical-align: middle;
-
-		&--offset {
-			margin-left: 5 * $spacing-unit;
-		}
-	}
-
-	&__link {
-		color: $color-nav-primary;
-		text-decoration: none;
-		text-transform: uppercase;
-
-		&:not(.btn) {
-			@include attention {
-				text-decoration: underline;
-			}
-		}
-	}
-}
-
-.c-list-social {
-	@extend %list-inline;
-
-	&__item {
-		margin-right: quarter($spacing-unit);
-		margin-bottom: quarter($spacing-unit);
-	}
-}
-
-.c-image-overlay {
-	display: block;
-	position: relative;
-
-	&__img {
-		filter: grayscale(100%);
-	}
-
-	&__body {
-		position: absolute;
-		z-index: 2;
-
-		&--bottom {
-			bottom: 0;
-			width: 100%;
-			margin-bottom: 0;
-		}
-	}
-
-	&::after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: $color-image-overlay;
-		content: '';
-		transition: .2s background-color ease-out;
-		z-index: 1;
-	}
-
-	&--reveal:hover::after {
-		background-color: transparent;
-	}
-}
+@import 'components.page-head';
+@import 'components.nav-primary';
+@import 'components.list-social';
+@import 'components.image-overlay';
+@import 'components.date';
+@import 'components.card';
 
 .c-actions {
 	text-align: center;
@@ -363,89 +238,6 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 .c-rule-vertical {
 	border-right: 3px solid $color-rule;
 	border-left: 3px solid $color-rule;
-}
-
-.c-date {
-	line-height: .7;
-	text-align: center;
-
-	&__day {
-		display: block;
-		margin-bottom: halve($spacing-unit);
-		color: $color-date-day;
-		font-family: $knockout-69;
-		font-size: 24px;
-		text-transform: uppercase;
-	}
-
-	&__date {
-		display: block;
-		font-family: $knockout-69;
-		font-size: 36px;
-	}
-
-	&__time {
-		font-family: $knockout-29;
-		font-size: 18px;
-	}
-}
-
-.c-card {
-	position: relative;
-	padding: 16px 0;
-	border-radius: 2px;
-	background-color: $color-off-white;
-
-	&::before,
-	&::after {
-		display: block;
-		position: absolute;
-		width: 6px;
-		height: 6px;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		content: '';
-	}
-
-	&::before {
-		top: quarter($spacing-unit);
-		left: quarter($spacing-unit);
-	}
-
-	&::after {
-		right: quarter($spacing-unit);
-		bottom: quarter($spacing-unit);
-	}
-
-	&--clubs,
-	&--spades {
-		color: $color-dark-gray;
-	}
-
-	&--hearts,
-	&--diamonds {
-		color: $color-red;
-	}
-
-	&--clubs::before,
-	&--clubs::after {
-		background-image: url('../images/suit-clubs.svg');
-	}
-
-	&--spades::before,
-	&--spades::after {
-		background-image: url('../images/suit-spades.svg');
-	}
-
-	&--hearts::before,
-	&--hearts::after {
-		background-image: url('../images/suit-hearts.svg');
-	}
-
-	&--diamonds::before,
-	&--diamonds::after {
-		background-image: url('../images/suit-diamonds.svg');
-	}
 }
 
 .c-heading {

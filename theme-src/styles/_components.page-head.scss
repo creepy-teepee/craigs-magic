@@ -1,0 +1,14 @@
+.c-page-head {
+	@extend %clearfix;
+
+	padding-top: 1.5 * $spacing-unit;
+
+	&__logo {
+		float: left;
+		vertical-align: top;
+	}
+
+	&__nav {
+		float: right;
+	}
+}
