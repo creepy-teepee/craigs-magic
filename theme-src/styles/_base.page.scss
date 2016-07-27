@@ -1,8 +1,10 @@
 @include media-query(lap-and-up) {
 	html {
-		background-image: url('../images/background-1.jpg');
-		background-position: center top;
-		background-repeat: no-repeat;
+		&.front {
+			background-image: url('../images/background-1.jpg');
+			background-position: center top;
+			background-repeat: no-repeat;
+		}
 	}
 }
 
