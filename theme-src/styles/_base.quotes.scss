@@ -8,27 +8,34 @@ blockquote {
 	p {
 		margin-bottom: quarter($spacing-unit);
 
+		// 1. Hang punctuation.
 		&:first-of-type {
-			position: relative;
 			color: $color-quote-first;
 			font-family: $knockout-69;
 			font-size: 36px;
+			text-indent: -.8em; // [1]
 			text-transform: uppercase;
 
-			&::before {
-				position: absolute;
-				top: -.3em;
-				left: -.4em;
+			// 1. Match line-height to paragraph or the leading of the whole paragraph increases.
+			&::before,
+			&::after {
 				font-size: 72px;
+				line-height: 45px; // [1]
+				vertical-align: middle;
+			}
+
+			&::before {
+				padding-right: .1em;
 				content: '“';
 			}
 		}
 
 		&::after {
-			content: '';
+			content: none;
 		}
 
 		&:last-of-type::after {
+			padding-left: .1em;
 			content: '”';
 		}
 
