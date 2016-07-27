@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="wrapper">
+		<div class="band band--large">
+			<div class="layout">
+				<div class="layout__item  u-2/3-lap-and-up">
+					<h1 class="u-beta">{{post.title}}</h1>
+					{{post.content}}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
