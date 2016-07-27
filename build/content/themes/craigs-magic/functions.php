@@ -1,5 +1,7 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
 use \Timber\Timber;
 
 // Enable post thumbnails (featured images).
