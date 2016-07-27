@@ -3,7 +3,7 @@
 		--><div class="layout__item  u-1/3-lap-and-up  u-mb+">
 			<a href="{{ post.link }}" class="c-image-overlay  c-image-overlay--reveal">
 				{% if post.get_thumbnail %}
-					<img src="{{ post.thumbnail.src | resize(540, 360) }}" class="c-image-overlay__img">
+					<img src="{{ post.thumbnail.src | resize(540, 360) }}" alt="{{post.thumbnail.title}}" class="c-image-overlay__img">
 				{% endif %}
 				<div class="c-image-overlay__body  c-image-overlay__body--bottom">
 					<h3 class="[ box  box--tiny ]  u-zeta  u-background-brand-alt  u-mb0">{{ post.title }}</h3>
