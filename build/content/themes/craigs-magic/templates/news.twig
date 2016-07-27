@@ -1,14 +1,9 @@
 {% extends "base.twig" %}
 
 {% block content %}
+	<div class="wrapper">
+		<h1>News</h1>
 
-	<h1>News</h1>
-
-	{% for post in posts %}
-		{% if post.get_thumbnail %}
-			<a href="{{ post.link }}"><img src="{{ post.thumbnail | resize(540, 360) }}" /></a>
-		{% endif %}
-		<h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-	{% endfor %}
-
+		{% include 'includes/news-list.twig' %}
+	</div>
 {% endblock %}
