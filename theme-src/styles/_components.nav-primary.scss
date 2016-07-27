@@ -6,12 +6,24 @@
 	font-size: 24px;
 
 	&__item {
-		margin-left: double($spacing-unit);
 		vertical-align: middle;
 
-		&--offset {
-			margin-left: 5 * $spacing-unit;
+		@include media-query(lap-and-up) {
+			margin-left: double($spacing-unit);
+
+			&--offset {
+				margin-left: 5 * $spacing-unit;
+			}
 		}
+
+		@include media-query(palm) {
+			margin: 0 $spacing-unit $spacing-unit;
+
+			&--offset {
+				margin-bottom: 0;
+			}
+		}
+
 	}
 
 	&__link {

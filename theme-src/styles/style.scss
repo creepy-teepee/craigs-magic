@@ -235,9 +235,16 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 	text-transform: uppercase;
 }
 
-.c-rule-vertical {
-	border-right: 3px solid $color-rule;
-	border-left: 3px solid $color-rule;
+.c-ruled {
+	@include media-query(lap-and-up) {
+		border-right: 3px solid $color-rule;
+		border-left: 3px solid $color-rule;
+	}
+
+	@include media-query(palm) {
+		border-top: 3px solid $color-rule;
+		border-bottom: 3px solid $color-rule;
+	}
 }
 
 .c-heading {
@@ -276,11 +283,13 @@ $inuit-enable-paddings:        true;
 $inuit-enable-paddings--large: true;
 @import '../../bower_components/inuit-spacing/trumps.spacing';
 
-// @import '../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive';
+$inuit-enable-responsive-margins:  true;
+$inuit-enable-responsive-paddings: true;
+@import '../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive';
 
 @import '../../bower_components/plumpcss-text-align/trumps.text-align';
 
-// @import '../../bower_components/plumpcss-responsive-text-align/trumps.text-align-responsive';
+@import '../../bower_components/plumpcss-responsive-text-align/trumps.text-align-responsive';
 
 @import '../../bower_components/inuit-widths/trumps.widths';
 
@@ -334,5 +343,6 @@ $inuit-enable-paddings--large: true;
 	background-image: url('../images/background-2.jpg');
 	background-position: center top;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 

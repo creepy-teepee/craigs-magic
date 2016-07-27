@@ -3,9 +3,20 @@
 
 	padding-top: 1.5 * $spacing-unit;
 
+	@include media-query(palm) {
+		text-align: center;
+	}
+
 	&__logo {
-		float: left;
 		vertical-align: top;
+
+		@include media-query(lap-and-up) {
+			float: left;
+		}
+
+		@include media-query(palm) {
+			margin-bottom: $spacing-unit;
+		}
 	}
 
 	&__nav {
