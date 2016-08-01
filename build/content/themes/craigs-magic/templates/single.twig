@@ -6,10 +6,11 @@
 			<h1 class="u-beta">{{post.title}}</h1>
 			<div class="layout  layout--large">
 				<div class="layout__item  u-1/2-lap-and-up">
-					<div class="u-light-type">
+					<div class="u-light-type  u-mb+">
 						<p>{{post.date}}</p>
 						{{post.content}}
 					</div>
+					<a href="/news" class="btn">News Archive</a>
 				</div><!--
 				--><div class="layout__item  u-1/2-lap-and-up">
 					{% if post.get_thumbnail %}
