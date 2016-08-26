@@ -4,6 +4,15 @@ define('THEME_PATH', dirname(__FILE__));
 
 require_once 'vendor/autoload.php';
 
+// Option tree.
+add_filter('ot_theme_mode', '__return_true');
+add_filter('ot_override_forced_textarea_simple', '__return_true');
+add_filter('ot_show_pages', '__return_false');
+
+require_once 'option-tree/ot-loader.php';
+
+// Post types.
+require_once 'post-types/page.php';
 require_once 'post-types/testimonial.php';
 
 use \Timber\Timber;

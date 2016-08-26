@@ -187,7 +187,7 @@ $inuit-enable-layout--large:  true;
 $inuit-enable-layout--center: true;
 @import '../../bower_components/inuit-layout/objects.layout';
 
-// @import '../../bower_components/inuit-list-bare/objects.list-bare';
+@import '../../bower_components/inuit-list-bare/objects.list-bare';
 
 // @import '../../bower_components/inuit-list-block/objects.list-block';
 
@@ -195,7 +195,7 @@ $inuit-enable-layout--center: true;
 
 // @import '../../bower_components/inuit-list-ui/objects.list-ui';
 
-// @import '../../bower_components/inuit-media/objects.media';
+@import '../../bower_components/inuit-media/objects.media';
 
 // @import '../../bower_components/plumpcss-meter/objects.meter';
 
@@ -279,9 +279,11 @@ $plump-wrapper-width: 1008px; // 960px + 24px padding each side.
 $inuit-enable-margins:         true;
 $inuit-enable-margins--none:   true;
 $inuit-enable-margins--tiny:   true;
+$inuit-enable-margins--small:  true;
 $inuit-enable-margins--large:  true;
 
 $inuit-enable-paddings:        true;
+$inuit-enable-paddings--none:  true;
 $inuit-enable-paddings--large: true;
 @import '../../bower_components/inuit-spacing/trumps.spacing';
 
