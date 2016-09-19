@@ -1,0 +1,9 @@
+.c-hero {
+	padding: (3 * $spacing-unit) 0;
+
+	@include media-query(lap-and-up) {
+		&__body {
+			width: 48%;
+		}
+	}
+}

@@ -3,15 +3,20 @@
 {% block content %}
 
 	<div class="wrapper">
-		<div class="[ band  band--large ]  u-1/2-lap-and-up">
-			<h1 class="u-mb+">
-				<img src="{{site.theme.link}}/images/yorks-premier-magician.svg" alt="Craig Stephenson: York’s Premier Magician">
-			</h1>
-			{% if shows %}
-				<h2 class="u-gamma  u-light-type">Upcoming Shows</h2>
-				<ul class="list-bare  u-mb+">
+		<div class="c-hero">
+			<div class="c-hero__body">
+				<img src="{{site.theme.link}}/images/welcome.svg" alt="Welcome to 'a highly recommended night of out-of-the-box entertainment'" class="u-mb+">
+				<p class="lede">Craig Stephenson is Yorkshire’s premier magician and psychological illusionist.</p>
+			</div>
+		</div>
+		
+		{% if shows %}
+			<div class="u-pb+">
+				<h2 id="shows" class="c-heading">Shows</h2>
+				<p>Craig’s shows regularly sell out quickly so to avoid disappointment, secure your tickets for future performances early.</p>	
+				<ul class="layout  u-mb+"><!--
 					{% for show in shows %}
-						<li class="u-ph0">
+						--><li class="layout__item  u-1/2-lap-and-up  u-mb">
 							<div class="media">
 								<div class="media__img  c-date  u-mt-">
 									<span class="c-date__day">{{show.date | date('D')}}</span>
@@ -26,11 +31,11 @@
 									<a href="{{show.bookingUrl}}" class="btn">Book Tickets</a>
 								</div>
 							</div>
-						</li>
+						</li><!--
 					{% endfor %}
-				</ul>
-			{% endif %}
-		</div>
+				--></ul>
+			</div>
+		{% endif %}
 
 		<div class="u-pb+">
 			<h2 id="about" class="c-heading">About</h2>
@@ -43,7 +48,6 @@
 					<p class="u-color-brand  u-text-upper  u-delta">His productions are an exciting mixture of contemporary magic, psychological illusion and humour.</p>
 					<p>Craig has written &amp; performed in various magic shows across the UK. Furthermore, in recent years he has had the opportunity to perform for audiences in Los Angeles and the Middle East.</p>
 					<p>Whether an intimate parlour show for a small group or a stage production for large audiences there is always plenty of audience participation, laughter and amazing magic.</p>
-					<p>His shows regularly sell out quickly so to avoid disappointment you can secure your tickets for future performances.</p>	
 				</div>
 			</div>
 		</div>
